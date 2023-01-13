@@ -1,7 +1,40 @@
 .nav {
-    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10rem;
+    padding: 2.5rem 3rem;
+    color: white;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    padding: 2rem;
+    align-items: center;
+    font-family: 'Permanent Marker', cursive;
+    flex-grow: 2;
+}
+
+.nav_left {
+    flex-grow: 1;
+}
+
+.nav_left h1 {
+    font-size: 3.3rem;
+}
+
+.nav_right {
+    flex-grow: 1;
+}
+
+.nav_right .nav_img {
+    width: 15%;
+    float: right;
+    overflow: hidden;
+}
+
+.nav_right .nav_img img {
+    width: 100%;
+}
+
+.nav_right .nav_icon {
+    font-size: 3rem;
+    display: none;
 }
