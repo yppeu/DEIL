@@ -1,22 +1,22 @@
-footer {
+.footer {
     position: fixed;
     bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 90%;
-    height: auto;
     border-radius: 60px;
-    background: rgba(000, 000, 000, 0.5);
-    margin: 15px;
-    overflow: hidden;
+    background: #841dd3ac;
+    margin-bottom: 10px;
 }
 
-footer ul {
+.footer ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     color: #fff;
-    padding: 2rem;
+    padding: 20px;
 }
 
-footer ul li {
-    font-size: 30px;
+.footer ul li {
+    font-size: 34px;
 }
