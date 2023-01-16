@@ -2,9 +2,6 @@
 @import url(../css/header.css);
 @import url(../css/footer.css);
 
-/* 웹 폰트 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Permanent+Marker&display=swap');
-
 body {
     background: rgb(0, 0, 0);
     background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(131, 29, 211, 1) 200%);
@@ -26,16 +23,35 @@ html {
 }
 
 .main_wrap {
-    padding-top: 150px;
+    padding-top: 140px;
     display: flex;
     flex-direction: column;
 }
 
-.bgm_title {
+/* 오늘의 bgm */
+.bgm_warp .bgm_title {
     color: #fff;
-    font-size: 8px;
-    font-weight: 100;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -1px;
     text-align: center;
+    display: block;
+}
+
+.bgm_warp .bgm_title em {
+    font-size: 20px;
+    animation: txtmove 1s infinite;
+    animation-iteration-count: 3;
+}
+
+@keyframes txtmove {
+    from {
+        transform: rotate(-10deg);
+    }
+
+    to {
+        transform: rotate(10deg);
+    }
 }
 
 .bgm_list {
@@ -51,6 +67,7 @@ html {
     height: auto;
     text-align: left;
     position: absolute;
+    border-radius: 20px;
     z-index: 2;
     top: 10px;
     left: 65px;
@@ -72,4 +89,40 @@ html {
     100% {
         transform: rotate(360deg);
     }
+}
+
+/* 인기차트 */
+.best_wrap {
+    padding-top: 230px;
+    display: flex;
+    flex-direction: column;
+}
+
+.best_wrap .best_title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    text-align: center;
+    display: block;
+    letter-spacing: -1px;
+}
+
+.best_wrap .best_title em {
+    font-size: 18px;
+}
+
+.best_wrap .best_list {
+    padding: 15px;
+}
+
+.best_wrap .best_list ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.best_wrap .best_list ul li {
+    width: 15%;
 }

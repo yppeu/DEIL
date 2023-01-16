@@ -1,8 +1,11 @@
+/* 웹 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Permanent+Marker&display=swap');
+
 body {
     width: 100%;
     word-break: keep-all;
     overflow-x: hidden;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Permanent Marker', 'Noto Sans KR', cursive;
 }
 
 html,
