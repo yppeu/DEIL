@@ -25,14 +25,50 @@ html {
     height: 100vh;
 }
 
-main {
+.main_wrap {
     padding-top: 150px;
+    display: flex;
+    flex-direction: column;
 }
 
 .bgm_title {
     color: #fff;
-    font-size: 12px;
+    font-size: 8px;
     font-weight: 100;
     text-align: center;
-    background: #000;
+}
+
+.bgm_list {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 20px;
+}
+
+/* 앨범사진 1 */
+.bgm_list img:nth-child(1) {
+    width: 55%;
+    height: auto;
+    text-align: left;
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    left: 40px;
+}
+
+/* LP사진 2 */
+.bgm_list img:nth-child(2) {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    z-index: 1;
+    top: 20px;
+    right: 40px;
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
 }
