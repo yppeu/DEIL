@@ -26,6 +26,7 @@ html {
     padding-top: 140px;
     display: flex;
     flex-direction: column;
+    padding-bottom: 140px;
 }
 
 /* 오늘의 bgm */
@@ -126,3 +127,37 @@ html {
 .best_wrap .best_list ul li {
     width: 15%;
 }
+
+/* 전세계 */
+.global_wrap {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.global_wrap .global_title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    text-align: center;
+    display: block;
+    letter-spacing: -1px;
+}
+
+.global_wrap .global_title em {
+    font-size: 18px;
+}
+
+.global_wrap .global_list {
+    padding: 15px;
+}
+
+.global_wrap .global_list ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.global_wrap .global_list ul li {}
