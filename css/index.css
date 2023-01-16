@@ -93,7 +93,7 @@ html {
 
 /* 인기차트 */
 .best_wrap {
-    padding-top: 230px;
+    padding-top: 235px;
     display: flex;
     flex-direction: column;
 }
