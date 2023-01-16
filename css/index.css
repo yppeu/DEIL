@@ -47,13 +47,13 @@ html {
 
 /* 앨범사진 1 */
 .bgm_list img:nth-child(1) {
-    width: 55%;
+    width: 50%;
     height: auto;
     text-align: left;
     position: absolute;
     z-index: 2;
     top: 10px;
-    left: 40px;
+    left: 65px;
 }
 
 /* LP사진 2 */
@@ -63,10 +63,11 @@ html {
     height: auto;
     z-index: 1;
     top: 20px;
-    right: 40px;
+    right: 45px;
     animation: rotate 1s linear infinite;
 }
 
+/* LP 무한루프 */
 @keyframes rotate {
     100% {
         transform: rotate(360deg);
