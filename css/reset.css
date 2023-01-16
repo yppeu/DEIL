@@ -1,14 +1,8 @@
-html {
-    font-size: 62.5%;
-}
-
-
 body {
     width: 100%;
     word-break: keep-all;
     overflow-x: hidden;
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 1.6rem;
 }
 
 html,
@@ -87,4 +81,6 @@ em {
 
 img {
     cursor: pointer;
+    height: auto;
+    max-width: 100%;
 }
