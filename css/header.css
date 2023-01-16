@@ -2,10 +2,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    position: fixed;
+    position: absolute;
     color: #fff;
     font-family: 'Permanent Marker', cursive;
     padding: 35px 25px;
+    width: 100%;
 }
 
 .nav_left {
