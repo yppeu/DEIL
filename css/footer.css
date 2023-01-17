@@ -9,6 +9,7 @@
     background: #841dd3ac;
     margin-bottom: 10px;
     padding: 10px;
+    z-index: 999;
 }
 
 .footer ul {

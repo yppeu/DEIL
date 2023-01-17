@@ -120,7 +120,6 @@ em {
     width: 100%;
     display: flex;
     flex-flow: row;
-    padding: 0 20px;
     justify-content: center;
 }
 
@@ -130,7 +129,7 @@ em {
     display: flex;
     flex-flow: row;
     justify-content: space-evenly;
-    padding: 0 25px 130px 25px;
+    padding: 0 25px 60px 25px;
 }
 
 .global_list .list>li {
@@ -140,7 +139,7 @@ em {
 
 /* 글로벌 POP TOP 100 */
 .pop_list .list {
-    width: 60%;
+    width: 70%;
     display: flex;
     flex-flow: column;
     color: #fff;
@@ -166,7 +165,10 @@ em {
 .pop_list .list li {
     display: flex;
     flex-flow: row;
+    align-items: center;
     margin: 5px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
 }
 
 .pop_list .list li .pop_img {
