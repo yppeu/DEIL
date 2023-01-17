@@ -27,9 +27,10 @@ $(function () {
     // },
   });
   var swiper = new Swiper(".popSwiper", {
-    direction: "vertical",
-    slidesPerView: "auto", // 한 슬라이드에 보여줄 갯수
-    freeMode: true, //슬라이드 넘길 때 위치 고정 여부
+    direction: "vertical ", // 방향 (세로)
+    slidesPerView: "auto", // 슬라이드를 한번에 보여줄 갯수
+    freeMode: true,
+    effect: "fade", // 희미해지면서 슬라이드 전환
     scrollbar: {
       el: ".swiper-scrollbar",
     },
