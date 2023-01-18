@@ -60,9 +60,15 @@ html {
     margin-bottom: 25px;
     color: white;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: -1px;
+    line-height: 25px;
     text-align: center;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 300;
 }
 
 em {
