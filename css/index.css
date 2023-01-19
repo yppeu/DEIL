@@ -166,20 +166,55 @@ em {
     display: inline-block;
     border-radius: 25px;
     background: #841dd3ac;
+    /* background: rgba(0, 0, 0, 0.418); */
     z-index: -1;
 }
 
 .pop_list .list li {
-    display: flex;
+    /* display: flex;
     flex-flow: row;
     align-items: center;
     margin: 5px;
     background: rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+    border-radius: 20px; */
+    display: none;
+}
+
+.pop_list .list li::after {
+    content: "";
+    overflow: hidden;
+    clear: both;
+    display: block;
 }
 
 .pop_list .list li .pop_img {
+    display: inline-block;
+    float: left;
     margin-right: 10px;
+}
+
+.pop_list .list li .pop_txt {
+    display: inline-block;
+    float: left;
+}
+
+/* li.li_bg {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    line-height: 25px;
+    text-align: left;
+    margin: 3px;
+    padding-top: 6px;
+    padding-left: 6px;
+} */
+
+.pop_list .list .more {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 /* 글로벌 MOVIE TOP 20 */
