@@ -13,32 +13,30 @@ $(function () {
   var swiper = new Swiper(".bestSwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
   });
   var swiper = new Swiper(".globalSwiper", {
     slidesPerView: "auto",
     spaceBetween: 30,
-    // pagination: {
-    //   el: ".swiper-pagination",
-    //   clickable: true,
-    // },
   });
-  var swiper = new Swiper(".popSwiper", {
-    direction: "vertical ", // 방향 (세로)
-    slidesPerView: "auto", // 슬라이드를 한번에 보여줄 갯수
-    freeMode: true,
-    effect: "fade", // 희미해지면서 슬라이드 전환
-    scrollbar: {
-      el: ".swiper-scrollbar",
+  var swiper = new swiper(".pop_mvSwiper", {
+    grabCursor: true,
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        translate: ["-125%", 0, -800],
+        rotate: [0, 0, -90],
+      },
+      next: {
+        shadow: true,
+        translate: ["125%", 0, -800],
+        rotate: [0, 0, 90],
+      },
     },
-    mousewheel: true,
   });
 });
 
-// 더보기 버튼
+// 글로벌 pop 리스트 css
 $(function () {
   let test = $("#more_list>li").slice(0, 1).show(); // 초기갯수
   $("#more_list>li").addClass("li_bg");
@@ -51,6 +49,7 @@ $(function () {
     "padding-top": "6px",
     "padding-left": "6px",
   });
+  // 더보기 버튼
   $("#more_list>li").removeClass("li_bg");
   console.log(test);
   $(".more")
@@ -58,10 +57,11 @@ $(function () {
     .click(function (e) {
       // 클릭시 more
       // e.preventDefault();
-      $("#more_list>li:hidden").slice(0, 3).show(); // 클릭시 more 갯수 지저정
-      if ($("#more_list>li:hidden").length < 0) {
+      $("#more_list>li:hidden").slice(0, 9).show(); // 클릭시 more 갯수 지저정
+      if ($("#more_list>li:hidden").slice(0, 9)) {
+        $("#more_list>li:hidden").slice(0).show();
         // 컨텐츠 남아있는지 확인
-        alert("게시물의 끝입니다."); // 컨텐츠 없을시 alert 창 띄우기
+        // alert("게시물의 끝입니다."); // 컨텐츠 없을시 alert 창 띄우기
       }
     });
 });
