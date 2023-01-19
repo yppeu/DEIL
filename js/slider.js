@@ -65,7 +65,7 @@ $(function () {
       // 클릭시 more
       if (isBool === false) {
         let leng2 = $("#more_list>li:hidden").length;
-        $("#more_list>li:hidden").slice(0, 6).show();
+        $("#more_list>li:hidden").slice(0, 10).show();
         console.log(leng2);
         $(".more").text("close");
         return (isBool = true);
