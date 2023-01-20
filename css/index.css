@@ -41,7 +41,7 @@ html {
 }
 
 .bgm_warp {
-    padding-top: 30vw;
+    padding-top: 35vw;
 }
 
 .best_wrap,
@@ -247,18 +247,31 @@ em {
     flex-flow: row;
     justify-content: center;
     padding: 0 25px 100px 25px;
+    color: #fff;
 }
 
 .pop_mv_list .list>li {
-    width: 75%;
-    border-radius: 15px;
+    width: 60%;
+    border-radius: 30px;
     position: relative;
     z-index: 4;
     margin-bottom: 10px;
 }
 
 .pop_mv_list .list .pop_mv_img {
-    filter: opacity(50%);
+    /* filter: brightness(50%); */
+    /* background: radial-gradient(circle at top left, rgba(0, 0, 0, 0) 17%, rgba(0, 0, 0, 0.9) 100%); */
+}
+
+.pop_mv_list .list .pop_mv_img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.6) 100%);
+    border-radius: 15px;
 }
 
 .pop_mv_list .list .pop_mv_txt {
@@ -270,7 +283,6 @@ em {
 }
 
 .pop_mv_list .list .pop_mv_txt p {
-    color: #fff;
     text-align: center;
-    font-size: 30px;
+    font-size: 26px;
 }

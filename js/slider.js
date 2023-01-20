@@ -1,5 +1,6 @@
 $(function () {
-  var swiper = new Swiper(".mainSwiper", {
+  //오늘의 bgm 스와이퍼
+  var mainswiper = new Swiper(".mainSwiper", {
     effect: "cube",
     grabCursor: true,
     slidesPerView: "1", //화면에 여러개 패널 보이기
@@ -10,28 +11,71 @@ $(function () {
       shadowScale: 0.4, // 그림자 크기, 수치가 클수록 그림자 커짐
     },
   });
-  var swiper = new Swiper(".bestSwiper", {
+  // 인기차트 100 스와이퍼
+  var bestSwiper = new Swiper(".bestSwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
   });
-  var swiper = new Swiper(".globalSwiper", {
+  // movie 20 스와이퍼
+  var globalSwiper = new Swiper(".globalSwiper", {
     slidesPerView: "auto",
     spaceBetween: 30,
   });
-  var swiper = new swiper(".pop_mvSwiper", {
+  // 더보기 버튼 생성
+  $("#more_list>li").addClass("li_bg");
+  // 더보기 버튼 css
+  $(".li_bg").css({
+    background: "rgba(0, 0, 0, 0.1)",
+    "border-radius": "20px",
+    "line-height": "25px",
+    "text-align": "left",
+    margin: "3px",
+    "padding-top": "6px",
+    "padding-left": "6px",
+  });
+  // 더보기 버튼 삭제
+  $("#more_list>li").removeClass("li_bg");
+
+  // 글로벌 pop 초기 갯수
+  $("#more_list>li").slice(0, 3).show();
+  let leng = $("#more_list>li").length;
+  let isBool = false;
+  console.log(leng);
+  $(".more")
+    .css("cursor", "pointer")
+    .click(function (e) {
+      e.preventDefault();
+      // 클릭시 more
+      if (isBool === false) {
+        let leng2 = $("#more_list>li:hidden").length;
+        $("#more_list>li:hidden").slice(0, 10).show();
+        console.log(leng2);
+        $(".more").text("close");
+        return (isBool = true);
+      } else {
+        console.log(isBool);
+        let leng3 = $("#more_list>li").slice(3, 6).hide();
+        console.log(leng3);
+        $(".more").text("more");
+        return (isBool = false);
+      }
+    });
+
+  // 글로벌 20 스와이퍼
+  var popmvSwiper = new Swiper(".popmvSwiper", {
+    // effect: "coverflow",
     grabCursor: true,
-    effect: "creative",
-    creativeEffect: {
-      prev: {
-        shadow: true,
-        translate: ["-125%", 0, -800],
-        rotate: [0, 0, -90],
-      },
-      next: {
-        shadow: true,
-        translate: ["125%", 0, -800],
-        rotate: [0, 0, 90],
-      },
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
     },
   });
 });
