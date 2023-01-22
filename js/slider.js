@@ -21,7 +21,7 @@ $(function () {
     slidesPerView: "auto",
     spaceBetween: 30,
   });
-  // 더보기 버튼 생성
+  // 더보기 클래스 생성
   $("#more_list>li").addClass("li_bg");
   // 더보기 버튼 css
   $(".li_bg").css({
@@ -32,8 +32,9 @@ $(function () {
     margin: "3px",
     "padding-top": "6px",
     "padding-left": "6px",
+    "box-shadow": "1px 1px 1px 1px rgba(0, 0, 0, 0.15)",
   });
-  // 더보기 버튼 삭제
+  // 더보기 클래스 삭제
   $("#more_list>li").removeClass("li_bg");
 
   // 글로벌 pop 초기 갯수
@@ -50,13 +51,13 @@ $(function () {
         let leng2 = $("#more_list>li:hidden").length;
         $("#more_list>li:hidden").slice(0, 10).show();
         console.log(leng2);
-        $(".more").text("close");
+        $(".more").text("close▲");
         return (isBool = true);
       } else {
         console.log(isBool);
         let leng3 = $("#more_list>li").slice(3, 6).hide();
         console.log(leng3);
-        $(".more").text("more");
+        $(".more").text("more▼");
         return (isBool = false);
       }
     });
@@ -78,4 +79,6 @@ $(function () {
       el: ".swiper-pagination",
     },
   });
+
+  // file 커스텀
 });
