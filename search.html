@@ -8,7 +8,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/search.css">
 
     <!-- 외부 아이콘 -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
@@ -37,41 +37,24 @@
     </header>
 
     <main>
-        <div class="login_wrap">
+        <div class="search_wrap">
             <div class="info_wrap">
-                <div class="userid">
-                    <label for="userid">이메일</label>
-                    <div>
-                        <input id="userid" type="text" autocomplete="on" name="userId">
-                    </div>
-                </div>
-                <div class="userpw">
-                    <label for="password">비밀번호</label>
-                    <div class="">
-                        <input id="password" type="password" autocomplete="current-password" name="password">
-                    </div>
-                </div>
-                <div class="sbmit_wrap">
-                    <div class="sbmit_bt">
-                        <button type="submit">로그인</button>
-                    </div>
-                    <p class="join_wrap">
-                        <span>회원이 아니라면? <a href="./join.html" target="_blank"><b>회원가입</b></a></span>
-                    </p>
+                <div class="search_input">
+                    <input id="search-address" type="text" placeholder="검색하기" name="text">
+                    <button type="submit">검색</button>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- <footer class="footer">
+    <footer class="footer">
         <ul>
             <li><a href="#"><i class="xi-home"></i></a></li>
             <li><a href="#"><i class="xi-headset"></i></a></li>
             <li><a href="./search.html"><i class="xi-search"></i></a></li>
             <li><a href="./profile.html"><i class="xi-emoticon-cool-o"></i></a></li>
         </ul>
-    </footer> -->
-
+    </footer>
 </body>
 
 </html>
