@@ -13,7 +13,7 @@
 }
 
 /* 공통 부모들 */
-.bgm_warp,
+.bgm_wrap,
 .best_wrap,
 .global_wrap,
 .pop_wrap,
@@ -24,7 +24,7 @@
     overflow: hidden;
 }
 
-.bgm_warp {
+.bgm_wrap {
     padding-top: 35vw;
 }
 
@@ -61,17 +61,17 @@ em {
     animation-iteration-count: 3;
 }
 
-.bgm_warp .bgm_list {
+.bgm_wrap .bgm_list {
     margin: 0 auto;
     width: 100%;
 }
 
-.bgm_warp .blist {
+.bgm_wrap .blist {
     padding: 0 20%;
     width: 100%;
 }
 
-.bgm_warp .blist_img {
+.bgm_wrap .blist_img {
     position: relative;
     z-index: 1;
 }
@@ -92,7 +92,7 @@ em {
     }
 }
 
-.bgm_warp .blist_img::before {
+.bgm_wrap .blist_img::before {
     content: "";
     position: absolute;
     right: calc(-100% + 60px);
